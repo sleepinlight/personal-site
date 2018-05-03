@@ -1,0 +1,26 @@
+@import './variables.scss';
+
+.App {
+  background-color: $leaf-mint;
+}
+.App-header {
+  background-color: $coral !important;
+}
+.announcement-title {
+  color: $slate-gray;
+}
+.btn-mint,
+.btn-success {
+  background-color: $leaf-mint;
+  border: none;
+  color: $coral;
+  &.hover,
+  &.focus {
+    background-color: $wonder-blue !important;
+    color: $off-white !important;
+  }
+}
+
+.nav-link {
+  color: $coral;
+}
