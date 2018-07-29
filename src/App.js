@@ -1,42 +1,40 @@
 import React, { Component } from 'react';
-import { Grid, Navbar, Jumbotron, Button } from 'react-bootstrap';
+import ReactRouter, { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Container, Row, Col, Navbar, Jumbotron, Button } from 'reactstrap';
+import { Nav, CTAButton, InformationalModal } from './shared/index';
+import HomeView from './HomeView';
+import AboutView from './AboutView';
+import ContactView from './ContactView';
 import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {name: "Andy"};
+  }
   render() {
     return (
-      <div>
-        <Navbar inverse fixedTop>
-          <Grid>
-            <Navbar.Header>
-              <Navbar.Brand>
-                <a className="nav-link" href="/">
-                  Andy's Page
-                </a>
-              </Navbar.Brand>
-              <Navbar.Toggle />
-            </Navbar.Header>
-          </Grid>
-        </Navbar>
-        <Jumbotron>
-          <Grid>
-            <h1 className="announcement-title">Ayo this is Andy</h1>
-            <p>
-              <Button
-                className="btn-mint"
-                bsStyle="success"
-                bsSize="large"
-                href="http://react-bootstrap.github.io/components.html"
-                target="_blank"
-              >
-                Smash That Contact
-              </Button>
-            </p>
-          </Grid>
-        </Jumbotron>
+      <div className="body">
+      <Container>
+        <Row>
+          <Col xs="12">Hello!!! 
+            <Router>
+              <div>
+              <Nav />
+              <Route exact path="/" component={HomeView} />
+              <Route path="/about" component={AboutView} />
+              <Route path="/contact" component={ContactView} />
+              </div>
+            </Router>
+          </Col>
+        </Row>
+      </Container>
       </div>
     );
+  }
+  parentLogger = () => {
+    console.log("I live in App.js");
   }
 }
 
