@@ -24,3 +24,22 @@
 .nav-link {
   color: $coral;
 }
+
+.header {
+
+}
+
+.footer {
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color:$black-drop;
+  color:$leaf-mint;
+  padding-top:40px;
+  .subFooter {
+    background-color: darken($black-drop, 6%);
+    margin-top:40px;
+    padding:10px 0;
+  }
+}

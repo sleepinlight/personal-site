@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactRouter, { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Container, Row, Col, Navbar, Jumbotron, Button } from 'reactstrap';
-import { Nav, CTAButton, InformationalModal } from './shared/index';
+import { Nav, Footer, CTAButton, InformationalModal } from './shared/index';
 import HomeView from './HomeView';
 import AboutView from './AboutView';
 import ContactView from './ContactView';
@@ -30,6 +30,7 @@ class App extends Component {
           </Col>
         </Row>
       </Container>
+      <Footer/>
       </div>
     );
   }
