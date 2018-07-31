@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactRouter, { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Container, Row, Col, Navbar, Jumbotron, Button } from 'reactstrap';
-import { Nav, Footer, CTAButton, InformationalModal } from './shared/index';
+import { Header, Footer, CTAButton, InformationalModal } from './shared/index';
 import HomeView from './HomeView';
 import AboutView from './AboutView';
 import ContactView from './ContactView';
@@ -16,21 +16,17 @@ class App extends Component {
   render() {
     return (
       <div className="body">
-      <Container>
-        <Row>
-          <Col xs="12">Hello!!! 
-            <Router>
-              <div>
-              <Nav />
-              <Route exact path="/" component={HomeView} />
-              <Route path="/about" component={AboutView} />
-              <Route path="/contact" component={ContactView} />
-              </div>
-            </Router>
-          </Col>
-        </Row>
-      </Container>
-      <Footer/>
+        
+        <Router>
+        
+          <div>
+          <Header/>               
+            <Route exact path="/" component={HomeView} />
+            <Route path="/about" component={AboutView} />
+            <Route path="/contact" component={ContactView} />
+          </div>
+        </Router>
+        <Footer/>
       </div>
     );
   }
