@@ -5,7 +5,7 @@ import Nav from './Nav';
 export default class Header extends Component {
     render() {
         return (
-            <div class="header">
+            <div className="header">
                 <Container>
                     <Row>
                         <Col xs="12">

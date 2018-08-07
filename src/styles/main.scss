@@ -31,12 +31,14 @@
   }
 }
 
-.nav-link {
-  color: $coral;
-}
+
 
 .header {
-
+  padding:15px 0;
+  .nav-link {
+    color: $coral;
+    padding:6px 10px;
+  }
 }
 
 .footer {

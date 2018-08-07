@@ -5,17 +5,17 @@ function Nav() {
   return (
     <ul className="nav">
       <li>
-        <NavLink exact activeClassName="active" to="/">
+        <NavLink exact className="nav-link" activeClassName="active" to="/">
           Home
         </NavLink>
       </li>
       <li>
-        <NavLink activeClassName="active" to="/about">
+        <NavLink className="nav-link" activeClassName="active" to="/about">
           About
         </NavLink>
       </li>
       <li>
-        <NavLink activeClassName="active" to="/contact">
+        <NavLink className="nav-link" activeClassName="active" to="/contact">
           Contact
         </NavLink>
       </li>
