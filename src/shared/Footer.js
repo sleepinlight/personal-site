@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import { Container, Row, Col} from 'reactstrap';
+import Nav from './Nav';
+import ReactRouter, { BrowserRouter as Router, Route } from 'react-router-dom';
 
 export default class Footer extends Component {
     render() {
@@ -10,7 +12,7 @@ export default class Footer extends Component {
                         <Col xs="12" md="6">
                             Contact Info
                         </Col>
-                        <Col xs="12" md="6">Navigation Info</Col>
+                        <Col xs="12" md="6"><Router><Nav/></Router></Col>
                     </Row>
                 </Container>
                 <SubFooter></SubFooter>
