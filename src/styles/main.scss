@@ -19,6 +19,16 @@
 .announcement-title {
   color: $slate-gray;
 }
+
+.btn {
+  background-color:$wonder-blue;
+  border:0px;
+  &:hover {
+    background-color:darken($wonder-blue, 15%);
+    color:lighten($wonder-blue, 10%);
+  }
+}
+
 .btn-mint,
 .btn-success {
   background-color: $leaf-mint;
@@ -31,12 +41,19 @@
   }
 }
 
-.nav-link {
-  color: $coral;
-}
+
 
 .header {
-
+  padding:15px 0;
+  .nav-link {
+    color: $coral;
+    padding:6px 10px;
+    text-transform:uppercase;
+    letter-spacing:1.3px;
+    &:active, &:hover {
+      color:$wonder-blue;
+    }
+  }
 }
 
 .footer {

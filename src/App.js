@@ -11,11 +11,11 @@ import './App.css';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {name: "Andy"};
+    this.state = {name: "Andy", theme: "light"};
   }
   render() {
     return (
-      <div className="body">
+      <div className="body light-theme">
         <Router>
           <div>
             <Header/>
@@ -44,6 +44,10 @@ class App extends Component {
   }
   parentLogger = () => {
     console.log("I live in App.js");
+  }
+
+  toggleTheme = () => {
+    
   }
 }
 

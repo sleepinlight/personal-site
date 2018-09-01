@@ -15,11 +15,11 @@ export default class AboutView extends Component {
             <div>
                <Container>
                    <Row>
-                       <Col xs="12">
+                      
                         {this.state.first.map(function(item, i) {
-                            return <ProjectCard key={i} ProjectTitle={item[0]} />
+                            return <Col xs="12" md="4"><ProjectCard key={i} ProjectTitle={item} /></Col>;
                         })}
-                       </Col>
+                       
                    </Row>
                </Container>
             </div>
